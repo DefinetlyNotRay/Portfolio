@@ -1,0 +1,59 @@
+---
+
+---
+
+<script >
+
+    const button = document.querySelector(".mobile-nav-toggle");
+
+
+    button?.addEventListener("click", () => {
+        const menu = document.querySelector(".menu")
+        const state = menu?.getAttribute('data-visible');
+        const hamburger = document.querySelector(".hamburger-icon")
+        const exitIcon = document.querySelector(".exit-icon")
+        if(state === "false"){
+            menu?.setAttribute("data-visible", "true")
+            button.setAttribute("aria-expanded", "true")
+            
+        } else{
+            menu?.setAttribute("data-visible", "false")
+            button.setAttribute("aria-expanded", "false")
+            
+        }
+        menu?.classList.toggle("translate-x-full")
+        hamburger?.classList.toggle("hidden")
+        exitIcon?.classList.toggle("hidden")
+    })
+
+</script>
+<div class="hamburger fixed z-50 right-0">
+    <button class="mobile-nav-toggle | btn btn-ghost py-4" aria-controls="Primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="hamburger-icon |  " width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <line y1="1.5" x2="28" y2="1.5" stroke="white" stroke-width="3"/>
+        <line y1="10.5" x2="28" y2="10.5" stroke="white" stroke-width="3"/>
+        <line y1="20.5" x2="28" y2="20.5" stroke="white" stroke-width="3"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="exit-icon | hidden" width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <path d="M2.00008 20.9999L21.0001 1.99989" stroke="white" stroke-width="3"/>
+        <line x1="2.06066" y1="1.93934" x2="21.0607" y2="20.9393" stroke="white" stroke-width="3"/>
+        </svg>
+        </button>
+</div>
+   <nav class="overflow-hidden fixed z-40 right-0">
+            <div class="menu | flex flex-col  min-h-screen py-28 px-10 backdrop-blur-3xl translate-x-full transition-transform transition-duration: 300ms " data-visible="false">
+                <ul class="flex flex-col gap-5 text-right text-2xl">
+                    <li><a class="p-0" href="/index">Home</a></li>
+                    <li><a class="p-0" href="/Projects">Projects</a></li>
+                    <li><a class="p-0" href="/About-Me">About Me</a></li>
+                    <li><a class="p-0" href="/Contact-Me">Contact Me</a></li>
+                </ul>
+            </div>
+        
+    </nav>
+
+<style>
+    ul{
+        text-align: right;
+    }
+</style>
