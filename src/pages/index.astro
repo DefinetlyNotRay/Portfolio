@@ -6,8 +6,8 @@ import Layout from '../layouts/Layout.astro';
 	<main>
       <div class="background__section | " id="sectionOne">
          <!-- <img src="../../public/images/IMG_8874 1.png" alt="bacground__section one" class="background__image"> -->
-         <div class="div_image" class=" ">
-
+         <div class="div_image | relative ">
+            <div class="text__box | w-4/6 absolute inset-0 h-96 mx-auto my-auto mix-blend-color-burn">ia</div>
          </div>
       </div>
    </main>
@@ -20,5 +20,9 @@ import Layout from '../layouts/Layout.astro';
       background-size: contain;
       aspect-ratio: 16/9;
       background-repeat: no-repeat;
-  } 
+  }
+
+  .text__box{
+      background-color: hsl(0 85 \ 100%);
+  }
 </style>
