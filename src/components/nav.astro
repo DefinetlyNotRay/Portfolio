@@ -1,5 +1,4 @@
 ---
-
 ---
 
 <script >
@@ -22,7 +21,7 @@
         exitIcon?.classList.toggle("hidden")
     })
 </script>
-<div class="hamburger fixed z-50 right-0">
+<div class="fixed right-0 z-50 hamburger">
     <button class="mobile-nav-toggle | btn btn-ghost py-4 md:hidden" aria-controls="Primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="hamburger-icon |  " width="28" height="28" viewBox="0 0 28 28" fill="none">
         <line y1="1.5" x2="28" y2="1.5" stroke="white" stroke-width="3"/>
@@ -35,16 +34,15 @@
         </svg>
         </button>
 </div>
-   <nav class="overflow-hidden fixed z-40 right-0 md:inset-0 md:min-w-full md:flex md:justify-center md:min-h-fit lg:inset-0 lg:min-w-full lg:flex lg:justify-center lg:min-h-fit md:text-sm">
-            <div class="Menu | flex flex-col bg-slate-600 bg-opacity-5 min-h-screen py-28 px-10 backdrop-blur-lg translate-x-full transition-transform transition-duration:300ms md:translate-x-0 md:flex-row md:justify-center   md:min-h-fit md:p-0 md:my-7 md:backdrop-blur-3xl md:py-4 md:w-fit md:px-20 lg:translate-x-0 lg:flex-row lg:justify-center  lg:min-h-fit lg:p-0 lg:my-7 lg:backdrop-blur-3xl lg:py-5 lg:w-fit lg:px-40" data-visible="false">
-                <ul class="flex flex-col md:flex-row gap-5 md:items-center text-right text-2xl">
-                    <li><a class="p-0 font-light text-white " href="/index">Home</a></li>
-                    <li><a class="p-0 font-light text-white " href="/Projects">Projects</a></li>
-                    <li><a class="p-0 font-light text-white " href="/About-Me">About Me</a></li>
-                    <li><a class="p-0 font-light text-white " href="/Contact-Me">Contact Me</a></li>
-                </ul>
-            </div>
-        
+   <nav class="fixed right-0 z-40 overflow-hidden md:inset-0 md:min-w-full md:flex md:justify-center md:min-h-fit lg:inset-0 lg:min-w-full lg:flex lg:justify-center lg:min-h-fit md:text-sm">
+        <div class="Menu | flex flex-col bg-slate-600 bg-opacity-5 min-h-full py-28 px-10 backdrop-blur-lg translate-x-full transition-transform transition-duration:300ms md:translate-x-0 md:flex-row md:justify-center md:h-5 md:p-0 md:my-7 md:backdrop-blur-3xl md:py-8 md:pb-9 md:w-fit md:min-h-fit md:px-20 lg:translate-x-0 lg:flex-row lg:justify-center lg:min-h-fit lg:p-0 lg:my-7 lg:backdrop-blur-3xl lg:py-10 lg:w-fit lg:px-40" data-visible="false">
+            <ul class="flex flex-col gap-5 text-2xl text-right md:flex-row md:items-center">
+                <li><a class="p-0 font-light text-white " href="/index">Home</a></li>
+                <li><a class="p-0 font-light text-white " href="/Projects">Projects</a></li>
+                <li><a class="p-0 font-light text-white " href="/About-Me">About Me</a></li>
+                <li><a class="p-0 font-light text-white " href="/Contact-Me">Contact Me</a></li>
+            </ul>
+        </div>
     </nav>
 
 <style>
@@ -65,6 +63,7 @@
         padding: 0;
         line-height: normal;
     } 
+
     }
    
     @media (min-width: 1020px){
